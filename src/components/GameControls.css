@@ -1,0 +1,91 @@
+.game-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.score-display {
+  display: flex;
+  gap: 30px;
+  font-size: 1.2rem;
+}
+
+.score-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.score-label {
+  font-weight: 600;
+  color: #555;
+}
+
+.score-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.black-score .score-value {
+  color: #1a1a1a;
+}
+
+.white-score .score-value {
+  color: #333;
+}
+
+.current-player {
+  font-size: 1.1rem;
+  color: #666;
+  font-weight: 500;
+  min-height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ai-thinking {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #667eea;
+  font-weight: 600;
+}
+
+.thinking-spinner {
+  width: 16px;
+  height: 16px;
+  border: 3px solid #e0e0e0;
+  border-top: 3px solid #667eea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.restart-button {
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.restart-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.restart-button:active {
+  transform: translateY(0);
+}
+

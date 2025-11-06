@@ -1,0 +1,98 @@
+.debug-panel {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.debug-panel h2 {
+  margin: 0 0 15px 0;
+  color: #333;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #764ba2;
+  padding-bottom: 10px;
+}
+
+.debug-panel h3 {
+  margin: 20px 0 10px 0;
+  color: #555;
+  font-size: 1.1rem;
+}
+
+.status-section,
+.metrics-section,
+.info-section {
+  margin-bottom: 15px;
+}
+
+.status-item,
+.metric-item,
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.status-item:last-child,
+.metric-item:last-child,
+.info-item:last-child {
+  border-bottom: none;
+}
+
+.status-label,
+.metric-label {
+  font-weight: 600;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.status-value,
+.metric-value,
+.info-value {
+  font-weight: bold;
+  color: #333;
+}
+
+.winner-message {
+  margin-top: 15px;
+  padding: 15px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1.2rem;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.console-note {
+  margin-top: 15px;
+  padding: 12px;
+  background: #fff3cd;
+  border-left: 4px solid #ffc107;
+  border-radius: 4px;
+}
+
+.console-note p {
+  margin: 0;
+  color: #856404;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.info-item {
+  color: #666;
+  font-size: 0.9rem;
+}
+

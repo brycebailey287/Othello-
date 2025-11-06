@@ -1,0 +1,103 @@
+.board {
+  display: flex;
+  justify-content: center;
+}
+
+.board-grid {
+  display: inline-flex;
+  flex-direction: column;
+  background: #0f5132;
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.board-row {
+  display: flex;
+}
+
+.cell {
+  width: 60px;
+  height: 60px;
+  background: #2d5016;
+  border: 1px solid #1a3a0e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.cell:hover:not(.black):not(.white) {
+  background: #3a6b1f;
+}
+
+.cell.black {
+  cursor: default;
+}
+
+.cell.white {
+  cursor: default;
+}
+
+.valid-move {
+  cursor: pointer;
+}
+
+.valid-move:hover {
+  background: #4a8b2f;
+}
+
+.piece {
+  width: 85%;
+  height: 85%;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  animation: drop 0.2s ease-out;
+}
+
+@keyframes drop {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.black-piece {
+  background: linear-gradient(135deg, #1a1a1a, #000);
+  border: 2px solid #333;
+}
+
+.white-piece {
+  background: linear-gradient(135deg, #ffffff, #e0e0e0);
+  border: 2px solid #bbb;
+}
+
+.valid-move-indicator {
+  width: 30%;
+  height: 30%;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  position: absolute;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.2);
+  }
+}
+
